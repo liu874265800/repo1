@@ -1,0 +1,6 @@
+jsp+servlet+jdbc更新数据基本流程
+1. 在页面获取要删除的数据ID发送给Servlet
+
+2. 在Servlet获取删除条件
+2.1 执行删除并返回响应
+ 

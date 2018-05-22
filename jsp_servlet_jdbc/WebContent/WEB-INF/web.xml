@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>jsp_servlet_jdbc</display-name>
+  
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>org.jsp.servlet.jdbc.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+    <!-- jsp+servlet+jdbc- 更新流程-第四步-2: 配置更新收货地址Servlet -->
+  <servlet>
+  	<servlet-name>updateReceiveAddressServlet</servlet-name>
+  	<servlet-class>org.jsp.servlet.jdbc.UpdateReceiveAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>updateReceiveAddressServlet</servlet-name>
+  	<url-pattern>/updateReceiveAddressServlet</url-pattern>
+  </servlet-mapping>
+  
+    <!-- jsp+servlet+jdbc- 更新流程-第二步-2: 配置查找收货地址Servlet -->
+  
+  <servlet>
+  	<servlet-name>findReceiveAddressServlet</servlet-name>
+  	<servlet-class>org.jsp.servlet.jdbc.FindReceiveAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>findReceiveAddressServlet</servlet-name>
+  	<url-pattern>/findReceiveAddressServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- jsp+servlet+jdbc-删除流程-第二步-2: 配置删除收货地址Servlet -->
+  
+  <servlet>
+  	<servlet-name>deleteReceiveAddress</servlet-name>
+  	<servlet-class>org.jsp.servlet.jdbc.DeleteReceiveAddress</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>deleteReceiveAddress</servlet-name>
+  	<url-pattern>/deleteReceiveAddress</url-pattern>
+  </servlet-mapping>
+  
+  <!-- jsp+servlet+jdbc-查询流程-第二步-2: 配置查询收货地址Servlet -->
+  
+  <servlet>
+  	<servlet-name>searchAllReceiveAddress</servlet-name>
+  	<servlet-class>org.jsp.servlet.jdbc.SearchAllReceiveAddress</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>searchAllReceiveAddress</servlet-name>
+  	<url-pattern>/searchAllReceiveAddress</url-pattern>
+  </servlet-mapping>
+  
+  <!-- jsp+servlet+jdbc-添加流程-第二步-2: 配置收货地址Servlet -->
+  
+  <servlet>
+  	<servlet-name>addReceiveAddress</servlet-name>
+  	<servlet-class>org.jsp.servlet.jdbc.AddReceiveAddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>addReceiveAddress</servlet-name>
+  	<url-pattern>/addReceiveAddress</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
